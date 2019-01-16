@@ -1,0 +1,36 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+//Variables
+@import 'variables';
+
+//added by c_sousen 
+$fa-font-path: "../webfonts";
+// Variables
+@import 'variables';
+
+//adding fontawesome dependencies  : by c_sousen
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//Integration of Admin LTE 2 css styling
+// added by c_sousen
+@import '~admin-lte/dist/css/adminlte.css';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+//added by c_sousen
+// .router-link-exact-active{
+//   background-color: chocolate;
+//   color: #fff;
+// }
+// .router-link-active{
+//   background-color: chocolate;
+//   color: #fff important;
+// }
