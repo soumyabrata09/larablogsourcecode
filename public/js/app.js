@@ -14044,7 +14044,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
+//require('https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js');
 __webpack_require__(14);
 // require('./admin-lte');
 
@@ -14090,7 +14090,6 @@ var app = new Vue({
 
 window._ = __webpack_require__(15);
 window.Popper = __webpack_require__(4).default;
-
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This

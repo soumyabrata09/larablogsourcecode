@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>CSS Grid Example</title>
+        <title>CafeHut</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400,700" rel="stylesheet">
@@ -19,9 +19,11 @@
     <body>
         <header>
             <div class="top-nav container">
-                <div class="logo">CSS Grid Example</div>
+                <div class="logo">
+                <img src="img/logo.jpg" alt="hero image" class="avatar">CafeHut
+                </div>
                 <ul>
-                    <li><a href="#">Shop</a></li>
+                    <li><a href="/shop">Shop</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Cart</a></li>
@@ -30,8 +32,8 @@
 
             <div class="hero container">
                 <div class="hero-copy">
-                    <h1>CSS Grid Example</h1>
-                    <p>A practical example of using CSS Grid for a typical website layout.</p>
+                    <h1>CafeSushe</h1>
+                    <p>Smooth blends of cafine</p>
                     <div class="hero-buttons">
                         <a href="#" class="button button-white">Button 1</a>
                         <a href="#" class="button button-white">Button 2</a>
@@ -39,7 +41,7 @@
                 </div> <!-- end hero-copy -->
 
                 <div class="hero-image">
-                    <img src="img/macbook-pro-laravel.png" alt="hero image">
+                    <img src="img/food1.jpg" alt="hero image">
                 </div>
             </div> <!-- end hero -->
         </header>
@@ -57,7 +59,15 @@
 
 
                 <div class="products text-center">
+                <!-- route built-in blade function -->
+                @foreach($products as $product)
                     <div class="product">
+                        <a href="{{ route('shop.show',$product->slug) }}"><img src="{{ asset('img/'.$product->slug.'.jpg') }}" alt="image not found"></a>
+                        <a href="{{ route('shop.show',$product->slug) }}"><div class="product-name">{{ $product->name }}</div></a>
+                        <div class="product-price">{{ $product->price }}</div>
+                    </div>
+                @endforeach
+                    <!-- <div class="product">
                         <a href="#"><img src="img/macbook-pro.png" alt="product"></a>
                         <a href="#"><div class="product-name">MacBook Pro</div></a>
                         <div class="product-price">$2499.99</div>
@@ -91,16 +101,11 @@
                         <a href="#"><img src="img/macbook-pro.png" alt="product"></a>
                         <a href="#"><div class="product-name">MacBook Pro</div></a>
                         <div class="product-price">$2499.99</div>
-                    </div>
-                    <div class="product">
-                        <a href="#"><img src="img/macbook-pro.png" alt="product"></a>
-                        <a href="#"><div class="product-name">MacBook Pro</div></a>
-                        <div class="product-price">$2499.99</div>
-                    </div>
+                    </div> -->
                 </div> <!-- end products -->
 
                 <div class="text-center button-container">
-                    <a href="#" class="button">View more products</a>
+                    <a href="{{ route('shop.index') }}" class="button">View more products</a>
                 </div>
 
             </div> <!-- end container -->
@@ -135,4 +140,5 @@
 
         @include('partials.footer')
     </body>
+    <script rel="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 </html>

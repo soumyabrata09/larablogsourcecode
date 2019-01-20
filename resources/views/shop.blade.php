@@ -53,12 +53,14 @@
                 </div>
             </div>
             <div class="products text-center">
-                        <div class="product">
-                        <a href="#"><img src="https://laravelecommerceexample.ca/storage/products/dummy/laptop-1.jpg" alt="product"></a>
-                        <a href="#"><div class="product-name">Laptop 1</div></a>
-                        <div class="product-price">1648.84</div>
-                    </div>
-                                    <div class="product">
+            @foreach($products as $product)
+                <div class="product">
+                    <a href="{{ route('shop.show',$product->slug) }}"><img src="{{ asset('img/'.$product->slug.'.jpg') }}" alt="product"></a>
+                    <a href="{{ route('shop.show',$product->slug)}}"><div class="product-name">{{ $product->name }}</div></a>
+                    <div class="product-price">{{ $product->price }}</div>
+                </div>
+            @endforeach
+                                    <!-- <div class="product">
                         <a href="#"><img src="https://laravelecommerceexample.ca/storage/products/dummy/laptop-12.jpg" alt="product"></a>
                         <a href="#"><div class="product-name">Laptop 12</div></a>
                         <div class="product-price">2286.93</div>
@@ -97,7 +99,7 @@
                         <a href="#"><img src="https://laravelecommerceexample.ca/storage/products/dummy/tablet-5.jpg" alt="product"></a>
                         <a href="#"><div class="product-name">Tablet 5</div></a>
                         <div class="product-price">547.67</div>
-                    </div>
+                    </div> -->
                 </div>
             <!-- end products -->
 

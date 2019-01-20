@@ -3,7 +3,7 @@
 //@import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400,700');
-@import url('https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js');
+
 // //Variables
 // //@import 'variables';
 
@@ -290,4 +290,10 @@ footer {
       }
     }
   }
+}
+.avatar {
+vertical-align: middle;
+width: 50px;
+height: 50px;
+border-radius:50%;
 }

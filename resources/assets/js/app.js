@@ -4,7 +4,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
+//require('https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js');
 require('./bootstrap');
 // require('./admin-lte');
 import VueRouter from 'vue-router'

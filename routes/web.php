@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index')->name('welcome');
 
 Route::get('/thankyou',function(){
     return view('thankyou');
@@ -21,9 +19,9 @@ Route::get('/thankyou',function(){
 Route::get('/product',function(){
     return view('product');
 });
-Route::get('/shop',function(){
-    return view('shop');
-});
+Route::get('/shop', 'ShopController@index')->name('shop.index');
+Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
+Route::get('/cart', 'CartController@index')->name('cart');
 //added by c_sousen purpose testing -> added lin to langding-page.blade.php as a starter page of technoblog.com 
 // Route::get('/', function () {
 //     return view('landing-page');
