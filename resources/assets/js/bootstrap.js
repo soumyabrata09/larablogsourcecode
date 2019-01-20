@@ -12,6 +12,7 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    require('bootstrap-sass');
     require('admin-lte'); // added c_sousen || admin-lte starter page integration(details found in packaje.json)
 } catch (e) {}
 

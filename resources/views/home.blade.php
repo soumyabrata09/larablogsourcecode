@@ -1,16 +1,15 @@
-<!-- @extends('layouts.app') -->
-<!-- added by c_sousen , to refer to the created master.blade.php file in the layouts folder -->
-@extends('layouts.master')
-@section('container-fluid')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+@extends('layouts.app')
 
-                <div class="card-body">
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
+
+                <div class="panel-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
