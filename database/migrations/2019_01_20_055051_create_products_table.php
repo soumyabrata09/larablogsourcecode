@@ -13,6 +13,7 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
+        //c_sousen Product details added
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
