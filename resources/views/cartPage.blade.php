@@ -1,4 +1,3 @@
-
 @extends('layout')
 
 @section('title', 'Shopping Cart')
@@ -10,7 +9,7 @@
 @section('content')
 
     @component('components.breadcrumbs')
-        <a href="#">Home</a>
+        <a href="/">Home</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
         <span>Shopping Cart</span>
     @endcomponent
@@ -18,9 +17,26 @@
     <div class="wrap cf">
   <!-- <h1 class="projTitle">Responsive Table<span>-Less</span> Shopping Cart</h1> -->
   <div class="heading cf">
-    <h1>User's cart</h1>
-    <a href="#" class="continue">Continue Shopping</a>
-    
+    <h1>User's cart
+    </h1>
+    <!-- <div class="alert-success curve-box">Items added successfully in your cart</div> -->
+    <!-- cheking whether any is been added successfully to cart else printing the list of error messages if any -->
+   @if(session()->has('success_message'))
+     <div class="alert-success curve-box">
+      {{session()->get('success_message')}}
+     </div> 
+   @endif
+   @if(count($errors)>0)
+     <div class="alert-danger curve-box">
+        <ul>
+          @foreach($errors->all() as $error_msg)
+            <li>{{$error_msg}}</li>
+          @endforeach
+        </ul>
+     </div>
+   @endif
+    <a href="{{route('shop.index')}}" class="continue">Continue Shopping</a>
+   
   </div>
   <div>You have 4 item(s) in your cart</div>
   <div class="cart">

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-use Gloudemans\Shoppingcart\Facades\Cart;
+use Gloudemans\Shoppingcart\Facades\Cart;   // crinsane shopping cart API we are using for the purpose of cart checking and checkout functionalities
 use Illuminate\Support\Facades\Redirect;
 
 class CartController extends Controller

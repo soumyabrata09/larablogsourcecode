@@ -41,7 +41,7 @@
 
     .blog-section {
         .blog-posts {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2,1fr);
             text-align: center;
             grid-template-areas:
                 "blog1"

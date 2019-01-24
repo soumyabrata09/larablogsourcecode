@@ -42,7 +42,7 @@
   }
 
   .blog-section .blog-posts {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
     grid-template-areas: "blog1" "blog3" "blog2";
   }
@@ -6066,6 +6066,31 @@ strong {
   color: #919191;
 }
 
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.curve-box {
+  display: inline;
+  margin-left: 2em;
+  border-radius: 50px 10px 50px 10px;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
 .pagination {
   display: inline-block;
   padding-left: 0;
@@ -6717,11 +6742,11 @@ img {
 .cf:before,
 .cf:after {
   content: " ";
-  display: table;
+  display: block;
 }
 
 .cf:after {
-  clear: both;
+  clear: right;
 }
 
 .cf {
@@ -6756,7 +6781,7 @@ img {
 }
 
 .heading {
-  padding: 0.01em 0;
+  padding: 0.85em 0;
   border-bottom: 1px solid #D0D0D0;
 }
 
@@ -6774,7 +6799,7 @@ img {
   font-size: 0.71em;
   padding: 1.03em;
   color: #fff;
-  background: #82ca9c;
+  background: #963f7a;
   font-weight: bold;
   border-radius: 50px;
   float: right;
@@ -6802,6 +6827,19 @@ img {
 .heading a.continue:focus:after,
 .heading a.continue:active:after {
   right: -9.9px;
+}
+
+.heading div {
+  float: left;
+  padding: 1em;
+  font-family: "Droid Serif", serif;
+  font-size: 0.75em;
+}
+
+#cartItemNum {
+  float: left;
+  display: table-cell;
+  padding: 1em;
 }
 
 .tableHead {
@@ -6990,9 +7028,9 @@ a.remove:hover {
   float: left;
   width: 15%;
   padding: 0.75em 0;
-  border-radius: 0 1em 1em 0;
+  border-radius: 0 0.5em 0.5em 0;
   text-align: center;
-  border: 1px solid #82ca9c;
+  border: 1px solid #963f7a;
 }
 
 .promoCode a.btn:hover {
@@ -7008,7 +7046,7 @@ a.remove:hover {
   font-size: 1em;
   padding: 1em 3em;
   color: #fff;
-  background: #82ca9c;
+  background: #963f7a;
   font-weight: bold;
   border-radius: 50px;
   float: right;
@@ -7039,8 +7077,8 @@ a.remove:hover {
 }
 
 .promoCode .btn {
-  font-size: .85em;
-  paddding: .5em 2em;
+  font-size: 0.71em;
+  paddding: 0.5em 2em;
 }
 
 /* TOTAL AND CHECKOUT  */
