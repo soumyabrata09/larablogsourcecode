@@ -22,17 +22,17 @@
             </div>
             <div class="product-section-images">
                 <div class="product-section-thumbnail selected">
-                    <img src="https://laravelecommerceexample.ca/storage/products/dummy/camera-3.jpg" alt="product">
+                    <img src="" alt="image not found">
                 </div>
 
                 <div class="product-section-thumbnail">
-                        <img src="https://laravelecommerceexample.ca/storage/products/dummy/laptop-2.jpg" alt="product">
+                        <img src="" alt="image not found">
                 </div>
                 <div class="product-section-thumbnail">
-                    <img src="https://laravelecommerceexample.ca/storage/products/dummy/laptop-3.jpg" alt="product">
+                    <img src="" alt="image not found">
                 </div>
                 <div class="product-section-thumbnail">
-                    <img src="https://laravelecommerceexample.ca/storage/products/dummy/laptop-4.jpg" alt="product">
+                    <img src="" alt="image not found">
                 </div>
             </div>
         </div>
@@ -49,9 +49,17 @@
 
             <p>&nbsp;</p>
 
-                <form action="https://laravelecommerceexample.ca/cart/69" method="POST">
+            <!-- Implementation pending of add to cart button currently following button is not operational-->
+                <!-- <form action="/" method="POST">
                     <input type="hidden" name="_token" value="fYVfIDdaDL0MX41mBqT4IjEoMuyE6ThHw5GeCTvR">
                     <button type="submit" class="button button-plain">Add to Cart</button>
+                </form> -->
+                <form action="{{ route('cart.store') }}" method ="POST">
+                    {{ csrf_field() }}
+                   <input type="hidden" name="id" value="{{$product->id}}" />
+                   <input type="hidden" name="name" value="{{$product->name}}"/>
+                   <input type="hidden" name="price" value="{{$product->price}}"/>
+                   <button type="submit" class="button button-plain">Add to Cart</buton>
                 </form>
             </div>
        </div>

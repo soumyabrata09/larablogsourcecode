@@ -53,11 +53,14 @@ class ShopController extends Controller
        //making might also like dynamic
        //we are fetching those procuts whose slug value is not equal to the slug value passed in the argument of Show() method
        //of ShopController::class
-       $mayAlsoLike = Product::where('slug','!=',$slug)->inRandomOrder()->take(4)->get();
+       //in productRecommender currently we are fetching the products except the one which currently is visible in 
+       //the proct details page
+       $productRecommender = Product::where('slug','!=',$slug)->ProductRecommender()->get();
        //we need to return an array
        // c_sousen
        return view('product')->with([
-           'product' => $products, 'mayAlsoLike' => $mayAlsoLike
+           'product' => $products, 
+           'productRecommender' => $productRecommender
            ]);
     }
 

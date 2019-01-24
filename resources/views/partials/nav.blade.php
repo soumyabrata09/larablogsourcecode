@@ -7,5 +7,6 @@
       <div class="top-nav-right">
        @include('partials.menus.main-right')
       </div>
-    </div> <!-- end top-nav -->
+    </div>
+     <!-- end top-nav -->
 </header>

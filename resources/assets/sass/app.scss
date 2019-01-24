@@ -1,4 +1,9 @@
 @charset 'utf-8';
+
+//@import "compass/css3";
+//@import "~compass-mixins/lib/compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700);
+//@import "compass/reset";
 // // Fonts
 //@import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
@@ -50,7 +55,8 @@
 // @import 'pages/_landing-page.scss';
 @import 'pages/shop';
 @import 'pages/product';
-// @import 'pages/cart';
+@import 'pages/cart';
+@import 'pages/cartpage';
 // @import 'pages/checkout';
  @import 'pages/thankyou';
  @import 'pages/search-results';

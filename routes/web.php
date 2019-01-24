@@ -21,7 +21,8 @@ Route::get('/product',function(){
 });
 Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
-Route::get('/cart', 'CartController@index')->name('cart');
+Route::get('/cart', 'CartController@index')->name('cart.index'); //testing
+Route::post('/cart', 'CartController@store')->name('cart.store');
 //added by c_sousen purpose testing -> added lin to langding-page.blade.php as a starter page of technoblog.com 
 // Route::get('/', function () {
 //     return view('landing-page');

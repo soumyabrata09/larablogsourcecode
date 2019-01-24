@@ -13,7 +13,7 @@
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
         <span>Shop</span>
         <!-- <div>
-            <div class="aa-input-container" id="aa-input-container">
+            <div class="aa-input-ontainer" id="aa-input-container">
     <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search with algolia..." name="search"
         autocomplete="off" />
     <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
@@ -55,8 +55,17 @@
             <div class="products text-center">
             @foreach($products as $product)
                 <div class="product">
-                    <a href="{{ route('shop.show',$product->slug) }}"><img src="{{ asset('img/'.$product->slug.'.jpg') }}" alt="product"></a>
-                    <a href="{{ route('shop.show',$product->slug)}}"><div class="product-name">{{ $product->name }}</div></a>
+                <!-- we are passing route path along with the slug value by 
+                look in the ShopController for detailed understandings -->
+                    <a href="{{ route('shop.show',$product->slug) }}">
+                    <!-- the following logic is trying to find the images in the designated '/img' folder 
+                    hene we have kept the image name same as the slug name in our database -->
+                      <img src="{{ asset('img/'.$product->slug.'.jpg') }}" alt="product">
+                    </a>
+                    <a href="{{ route('shop.show',$product->slug)}}">
+                      <div class="product-name">{{ $product->name }}
+                      </div>
+                    </a>
                     <div class="product-price">{{ $product->price }}</div>
                 </div>
             @endforeach
@@ -110,10 +119,10 @@
             </li>
             <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
             <li class="page-item">
-                <a class="page-link" href="https://laravelecommerceexample.ca/shop?page=2">2</a>
+                <a class="page-link" href="#">2</a>
             </li>
             <li class="page-item">
-                <a class="page-link" href="https://laravelecommerceexample.ca/shop?page=2" rel="next" aria-label="Next &raquo;">&rsaquo;</a>
+                <a class="page-link" href="#" rel="next" aria-label="Next &raquo;">&rsaquo;</a>
             </li>
         </ul>
 
