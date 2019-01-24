@@ -1,3 +1,5 @@
+This repo is housing the admin panel (currently in the development phase)
+Admin LTE 2 template is been used 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
