@@ -21,8 +21,9 @@ Route::get('/product',function(){
 });
 Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
-Route::get('/cart', 'CartController@index')->name('cart.index'); //testing
+Route::get('/cart', 'CartController@index')->name('cart.index'); //testing currently will route to the page cartPage.blade.php rather than routing to cart.blade.php , which was the previous behaviour
 Route::post('/cart', 'CartController@store')->name('cart.store');
+Route::get('/checkout','CheckoutController@index')->name('checkoutpage.index');
 //added by c_sousen purpose testing -> added lin to langding-page.blade.php as a starter page of technoblog.com 
 // Route::get('/', function () {
 //     return view('landing-page');

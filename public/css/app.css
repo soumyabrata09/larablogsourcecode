@@ -7274,6 +7274,204 @@ a.remove:hover {
   margin-right: 57px;
 }
 
+/*!
+* Wireframe Pingendo template (https://templates.pingendo.com)
+* Based on: Bootstrap v4.1.3 (https://getbootstrap.com)
+* Copyright 2014-2018 Pingendo (https://pingendo.com)
+*/
+
+html,
+body {
+  height: 100%;
+}
+
+.bg-primary {
+  color: color-yiq(#cdcdcd);
+}
+
+.bg-primary input::-webkit-input-placeholder {
+  color: #28a745;
+}
+
+.bg-primary input::-ms-input-placeholder {
+  color: #28a745;
+}
+
+.bg-primary input::placeholder {
+  color: #28a745;
+}
+
+.bg-primary .input-group-text {
+  color: color-yiq(#cdcdcd);
+}
+
+.bg-secondary {
+  color: color-yiq(#b0b0b0);
+}
+
+.bg-secondary input::-webkit-input-placeholder {
+  color: #28a745;
+}
+
+.bg-secondary input::-ms-input-placeholder {
+  color: #28a745;
+}
+
+.bg-secondary input::placeholder {
+  color: #28a745;
+}
+
+.bg-secondary .input-group-text {
+  color: color-yiq(#b0b0b0);
+}
+
+.bg-light {
+  color: color-yiq(#eaeaea);
+}
+
+.bg-light input::-webkit-input-placeholder {
+  color: #28a745;
+}
+
+.bg-light input::-ms-input-placeholder {
+  color: #28a745;
+}
+
+.bg-light input::placeholder {
+  color: #28a745;
+}
+
+.bg-light .input-group-text {
+  color: color-yiq(#eaeaea);
+}
+
+.bg-dark {
+  color: color-yiq(#555555);
+}
+
+.bg-dark input::-webkit-input-placeholder {
+  color: #28a745;
+}
+
+.bg-dark input::-ms-input-placeholder {
+  color: #28a745;
+}
+
+.bg-dark input::placeholder {
+  color: #28a745;
+}
+
+.bg-dark .input-group-text {
+  color: color-yiq(#555555);
+}
+
+.bg-info {
+  color: color-yiq(#8e8e8e);
+}
+
+.bg-info input::-webkit-input-placeholder {
+  color: #28a745;
+}
+
+.bg-info input::-ms-input-placeholder {
+  color: #28a745;
+}
+
+.bg-info input::placeholder {
+  color: #28a745;
+}
+
+.bg-info .input-group-text {
+  color: color-yiq(#8e8e8e);
+}
+
+.bg-success {
+  color: color-yiq(#28a745);
+}
+
+.bg-success input::-webkit-input-placeholder {
+  color: #28a745;
+}
+
+.bg-success input::-ms-input-placeholder {
+  color: #28a745;
+}
+
+.bg-success input::placeholder {
+  color: #28a745;
+}
+
+.bg-success .input-group-text {
+  color: color-yiq(#28a745);
+}
+
+.bg-warning {
+  color: color-yiq(#ffc107);
+}
+
+.bg-warning input::-webkit-input-placeholder {
+  color: #28a745;
+}
+
+.bg-warning input::-ms-input-placeholder {
+  color: #28a745;
+}
+
+.bg-warning input::placeholder {
+  color: #28a745;
+}
+
+.bg-warning .input-group-text {
+  color: color-yiq(#ffc107);
+}
+
+.bg-danger {
+  color: color-yiq(#dc3545);
+}
+
+.bg-danger input::-webkit-input-placeholder {
+  color: #28a745;
+}
+
+.bg-danger input::-ms-input-placeholder {
+  color: #28a745;
+}
+
+.bg-danger input::placeholder {
+  color: #28a745;
+}
+
+.bg-danger .input-group-text {
+  color: color-yiq(#dc3545);
+}
+
+.text-decoration-heading {
+  font-weight: bolder;
+  color: whitesmoke;
+  height: 2.2em;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.cover {
+  min-height: 100%;
+}
+
+.heading-background {
+  background: black;
+}
+
+.guest-decoration {
+  height: 1.54em;
+  font-weight: normal;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
