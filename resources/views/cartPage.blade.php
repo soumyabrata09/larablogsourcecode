@@ -38,7 +38,9 @@
     <a href="{{route('shop.index')}}" class="continue">Continue Shopping</a>
    
   </div>
-  <div>You have 4 item(s) in your cart</div>
+  @if(Cart::count() > 0)
+ <!-- making cart count dynamic -->
+  <h3>You have {{ Cart::count() }} item(s) in your cart</h3>
   <div class="cart">
 <!--    <ul class="tableHead">
       <li class="prodHeader">Product</li>
@@ -47,30 +49,48 @@
        <li>Remove</li>
     </ul>-->
     <ul class="cartWrap">
+    @foreach(Cart::content() as $cartItem)  
       <li class="items odd">
-        
     <div class="infoWrap"> 
         <div class="cartSection">
-        <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
-          <p class="itemNumber">#QUE-007544-002</p>
-          <h3>Item Name 1</h3>
+        <a href="{{ route('shop.show', $cartItem->model->slug) }}"><img src="{{ asset('img/'.$cartItem->model->slug.'.jpg') }}" alt="" class="itemImg" /></a>
+          <p class="itemNumber">{{$cartItem->model->slug}}</p>
+          <h3>{{$cartItem->model->name}}</h3>
         
-           <p> <input type="text"  class="qty" placeholder="3"/> x $5.00</p>
+           <p> <input type="text"  class="qty" placeholder="3"/> x {{$cartItem->model->price}}</p>
         
-          <p class="stockStatus"> In Stock</p>
+          <!-- <p class="stockStatus"> In Stock</p> -->
         </div>  
-    
+    <!-- end of cartSection -->
         
         <div class="prodTotal cartSection">
-          <p>$15.00</p>
+          <p>{{$cartItem->model->price}}</p> 
+          <!-- currently no calculation is been implemented -->
         </div>
+        <!-- end of producTotal cartSection -->
            <div class="cartSection removeWrap">
-           <a href="#" class="remove">x</a>
-<!--              <a>Add to Wishlist</a> -->
+           <!-- remove function implementation -->
+           <form action ="{{ route('cart.destroy' , $cartItem->rowId) }}" method ="POST" >
+           {{ csrf_field() }}
+           {{ method_field('DELETE')}}
+           <!-- <a href="#" class="remove">x</a> -->
+           <button type="submit" class="remove">X</button>
+           </form>
+          
+             <!-- <a>Add to Wishlist</a> -->
         </div>
+        <!-- end of cartSection removeWrap -->
+        <div class="cartSection">
+          <a>Add to Wishlist</a>
+        </div>
+        <!-- end of cartSection 2nd , which is housing the add to wishlist section -->
+      
       </div>
+      
+      <!-- end of infoWrap section -->
       </li>
-      <li class="items even">
+      @endforeach
+      <!-- <li class="items even">
         
        <div class="infoWrap"> 
         <div class="cartSection">
@@ -92,9 +112,9 @@
            <a href="#" class="remove">x</a>
         </div>
       </div>
-      </li>
+      </li> -->
       
-            <li class="items odd">
+      <!-- <li class="items odd">
              <div class="infoWrap"> 
         <div class="cartSection">
             
@@ -115,8 +135,8 @@
            <a href="#" class="remove">x</a>
         </div>
               </div>
-      </li>
-      <li class="items even">
+      </li> -->
+      <!-- <li class="items even">
        <div class="infoWrap"> 
         <div class="cartSection info">
              
@@ -140,14 +160,15 @@
         </div>
          </div>
          <div class="special"><div class="specialContent">Free gift with purchase!, gift wrap, etc!!</div></div>
-      </li>
+      </li> -->
       
       
       <!--<li class="items even">Item 2</li>-->
  
     </ul>
+    <!-- end of cart-wrap -->
   </div>
-  
+  <!-- end of cart -->
   <div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo" placholder="Enter Code" />
   <a href="#" class="btn"></a></div>
   
@@ -162,6 +183,9 @@
       <li class="totalRow"><a href="#" class="btn continue">Checkout</a></li>
     </ul>
   </div>
+  @else
+  <h3>No Items in your cart</h3>
+  @endif
 </div>
 
 

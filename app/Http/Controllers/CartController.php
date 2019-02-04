@@ -95,6 +95,9 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //to remove /delete item frmo the cart just invoke the remove() method
+        Cart::remove($id);
+        return redirect()->route('cart.index')->with('success_message','Item removed from your cart successfully');
+        //return back()->with('success_message','Item deleted from your cart successfully');
     }
 }
