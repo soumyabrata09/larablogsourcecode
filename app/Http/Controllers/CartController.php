@@ -44,6 +44,18 @@ class CartController extends Controller
     {
         // First we need to add the item to the cart.
         //Cart::add('id', 'name', 'quantity', 'value');
+
+        //preventing duplication of cart Item ,rather we would like to add multiple items from the cartPage quantity input filed itself
+        $duplicate_cartItem = Cart::search( function($cartItem,$rowId) use ($request){
+            return $cartItem->id === $request->id;
+        });
+
+        if( $duplicate_cartItem->isNotEmpty()){
+
+            return redirect()->route('cart.index')->with('success_message','Item is already in your cart');
+
+        }
+
        $cartItem = Cart::add($request->id,$request->name,1,$request->price); // 1 as default value here
         // Next we associate a model with the item.
        Cart::associate($cartItem->rowId,'App\Product');

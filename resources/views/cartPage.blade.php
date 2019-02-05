@@ -57,7 +57,7 @@
           <p class="itemNumber">{{$cartItem->model->slug}}</p>
           <h3>{{$cartItem->model->name}}</h3>
         
-           <p> <input type="text"  class="qty" placeholder="3"/> x {{$cartItem->model->price}}</p>
+           <p> <input type="text"  class="qty" /> x {{$cartItem->model->price}}</p>
         
           <!-- <p class="stockStatus"> In Stock</p> -->
         </div>  
@@ -174,12 +174,12 @@
   
   <div class="subtotal cf">
     <ul>
-      <li class="totalRow"><span class="label">Subtotal</span><span class="value">$35.00</span></li>
+      <li class="totalRow"><span class="label">Subtotal</span><span class="value">{{Cart::subtotal()}}</span></li>
       
-          <li class="totalRow"><span class="label">Shipping</span><span class="value">$5.00</span></li>
+          <!-- <li class="totalRow"><span class="label">Shipping</span><span class="value">$5.00</span></li> -->
       
-            <li class="totalRow"><span class="label">Tax</span><span class="value">$4.00</span></li>
-            <li class="totalRow final"><span class="label">Total</span><span class="value">$44.00</span></li>
+            <li class="totalRow"><span class="label">Tax</span><span class="value">{{Cart::tax()}}</span></li>
+            <li class="totalRow final"><span class="label">Total</span><span class="value">{{Cart::total()}}</span></li>
       <li class="totalRow"><a href="#" class="btn continue">Checkout</a></li>
     </ul>
   </div>

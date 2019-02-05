@@ -19,7 +19,7 @@
 }
 
 .button-primary {
-    background: $primary;
+    background: $custombgcolor;
     color: white !important;
     padding: 12px 40px;
 
@@ -36,6 +36,7 @@
 .button-plain {
     border: 1px solid $text-color !important;
     background: transparent;
+    //background: $custombgcolor;
 }
 
 .button-container {
